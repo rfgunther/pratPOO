@@ -73,4 +73,44 @@ ls -la                                       # Lista arquivos ocultos e visívei
 cat nome-do-arquivo                          # Exibe o conteúdo de um arquivo no terminal
 
 ```
+```
 
+# Criando Personal Access Token (PAT) no GitHub
+
+```
+Um Personal Access Token (PAT) é uma alternativa mais segura ao uso de senha para autenticar ações no GitHub, como git push e git pull.
+
+📸 Etapas para criar um PAT:
+Acesse https://github.com/settings/tokens
+
+Clique em "Generate new token"
+
+Selecione o escopo (geralmente repo e workflow são suficientes)
+
+Defina uma validade para o token
+
+Copie o token gerado e salve-o em lugar seguro (ele só aparece uma vez!)
+
+Exemplos visuais:
+
+⚠️ Dica: crie uma pasta imagens/ dentro de lab-01/ e salve suas capturas de tela lá.
+
+Salvar em cache as credenciais do PAT
+Ao usar o PAT com HTTPS, o Git solicitará autenticação. Para evitar digitar o token toda vez, é possível armazenar as credenciais em cache.
+
+Isso é especialmente útil para repositórios privados ou uso frequente.
+
+Você pode configurar assim:
+
+bash
+Copiar
+Editar
+git config --global credential.helper cache
+O Git irá armazenar suas credenciais em memória por 15 minutos (por padrão). Se quiser alterar o tempo:
+
+bash
+Copiar
+Editar
+git config --global credential.helper 'cache --timeout=3600'
+⏳ Isso configura o cache para 1 hora (3600 segundos).
+```
